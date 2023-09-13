@@ -1,3 +1,3 @@
-let a1:string="alex";
+import "./index.css";
 
-console.log(a1);
+import './ch03_6'

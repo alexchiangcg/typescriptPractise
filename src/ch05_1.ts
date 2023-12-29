@@ -1,4 +1,4 @@
-// 第 5 章 TypeScript 進階教學 - Function的深入了解 單元1
+// 第 5 章 TypeScript 進階教學 - Function的深入了解 單元1 - Function的基礎，快樂參數夥伴＋各種回傳類型
 
 // js
 // function get(a, b) {

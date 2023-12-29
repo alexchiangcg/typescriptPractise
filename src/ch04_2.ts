@@ -11,4 +11,4 @@ const usercard: UserCard = {
   int:123
 }
 
-// 這章節只有單純介紹 interface 與 type 的差異，並沒有實際應用，所以這裡就不多做介紹了。
+// 這章節只有單純宣告 interface，沒有其他應用，所以沒有實際範例

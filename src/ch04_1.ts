@@ -1,7 +1,7 @@
 // type 自定義類型
-let num1: number
-let str1: string | boolean | number
-let str2: string | boolean | number
+let ch04_1_num1: number
+let ch04_1_str1: string | boolean | number
+let ch04_1_str2: string | boolean | number
 
 type LiveName = string | boolean | number
 

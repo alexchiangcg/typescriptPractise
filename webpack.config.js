@@ -14,6 +14,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.[hash].js',
   },
+  // devServer 配置
+  devServer: {
+    port: 3000,
+    hot: true, // 啟用了熱更新（hot reload）
+    open: true // 設置了自動打開瀏覽器（open: true）
+  },
   // loader
   module: {
     rules: [

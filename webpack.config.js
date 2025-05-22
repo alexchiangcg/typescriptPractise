@@ -49,9 +49,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
   // 插件
   plugins: [
     new HtmlWebpackPlugin({
@@ -62,6 +59,11 @@ module.exports = {
     }),
     new CompressionPlugin()
   ],
-
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  },
   devtool: 'inline-source-map',
 }

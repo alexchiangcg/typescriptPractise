@@ -1,39 +1,21 @@
-import "./index.css";
+import devServer from "./server/dev";
+import prodServer from "./server/prod";
+import express from "express";
 
-// 路徑引入
-// import './commonJS'
+import { name } from "@/utils";
 
-// npm模組
-// import webpack from 'webpack'
+const port = 3000;
+const app = express();
 
-import '@/utils/parsing'
+// 執行npm run dev本地開發 or 執行npm run start部署後啟動線上伺服器
+if (process.env.NODE_ENV === "development") {
+  devServer(app);
+} else {
+  prodServer(app);
+}
 
+console.log("server side", name);
 
-// 什麼是ES Modules與CommonJS？
-
-// CommonJS -> Nodejs開發
-
-// const data = require('./commonJS')
-// console.log(data);
-
-// if (true) {
-//   const data = require('./commonJS')
-// }
-
-
-// ES6 ES Modules -> js標準
-// as 別名
-
-// import data, { userName as name1, age, address } from './es6Module'
-// console.log(data);
-// console.log(name1, age, address);
-
-// const userName = 'xxx'
-
-// X 不會動的程式碼
-// if (true) {
-//   import data2 from './es6Module'
-// }
-
-
-
+app.listen(port, () => {
+  console.log(`The application is running on port ${port}.`);
+});
